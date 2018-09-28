@@ -1,71 +1,61 @@
 /*
 solstices.js
-Author: Roland Johansson
-Created: June 2018
+Authors: Roland Johansson & Robert Johansson
+Created: September 2018
 */
 
 const solstices = [
-    new Date("2018-12-21T22:23:00Z").getTime(),
-    new Date("2019-12-22T04:19:00Z").getTime(),
-    new Date("2020-12-21T10:02:00Z").getTime(),
-    new Date("2021-12-21T15:59:00Z").getTime(),
-    new Date("2022-12-21T21:48:00Z").getTime(),
-    new Date("2023-12-22T03:27:00Z").getTime(),
-    new Date("2024-12-21T09:20:00Z").getTime(),
-    new Date("2025-12-21T15:03:00Z").getTime()
+    new Date("2018-12-21T22:23:00Z"),
+    new Date("2019-12-22T04:19:00Z"),
+    new Date("2020-12-21T10:02:00Z"),
+    new Date("2021-12-21T15:59:00Z"),
+    new Date("2022-12-21T21:48:00Z"),
+    new Date("2023-12-22T03:27:00Z"),
+    new Date("2024-12-21T09:20:00Z"),
+    new Date("2025-12-21T15:03:00Z")
 ]
 
-// Get todays date and time
-const now = new Date().getTime();
+// Todays date and time
+const now = new Date();
 
-// For testing purposes
-// const fakeNow = new Date("Jun 21, 2019 15:03:00").getTime();
+// Fake date and time for testing purposes
+const fakeNow = new Date("2018-12-21T22:22:57Z");
 
-let i = 0;
-// let distance = solstices[i].getTime() - now;
-// const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-// const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-// const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-// const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//Display the next solstice date
+document.getElementById("next-solstice").innerHTML = solstices[0];
 
-for (i = 0; now < solstices[i]; i++) {
-    console.log(solstices[i]);
-    document.getElementById("countdown-output").innerHTML = solstices[0];
-}
 
-//1. Every second:
 
-    //a. Loop through list of solstices, stop at current time interval (now < solstices[i]), return the nextSolstice date
 
-    //b. Calculate distance between now and nextSolstice date
-    
-    //c. Output to HTML
-    
 
+
+// ==== W3C example ====
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
 
 // Update the count down every 1 second
-// let x = setInterval(function() {
+var x = setInterval(function() {
 
+    // Get todays date and time
+    var now = new Date().getTime();
     
-//     // Get todays date and time
-//     let now = new Date().getTime();
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
     
-//     // Find the distance between now an the count down date
-//     let distance = countDownDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-//     // Time calculations for days, hours, minutes and seconds
-//     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
     
-//     // Output the result in an element with id="countdown-output"
-//     document.getElementById("countdown-output").innerHTML = "Tid kvar till nästa vintersolstånd<br><span id='time-left'>" + days + " d " + hours + " h "
-//     + minutes + " min " + seconds + " s</span>";
-    
-//     // If the count down is over, write some text 
-//     if (distance < 0) {
-//         clearInterval(x);
-//         document.getElementById("countdown-output").innerHTML = "EXPIRED";
-//     }
-// }, 1000);
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
