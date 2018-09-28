@@ -1,14 +1,10 @@
 @import "normalize";
-
-$font-stack: "Futura", Helvetica, Arial, sans-serif;
-$text-color: white;
-$background-color: #283c73;
+@import "vars";
 
 body {
   font-family: $font-stack;
-  background-color: $background-color;
-  color: $text-color;
-  padding: 1em;
+  background-color: $primary-color;
+  color: $secondary-color;
 }
 
 h1 {
@@ -16,6 +12,12 @@ h1 {
   bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.wrapper {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 a {
@@ -30,12 +32,9 @@ a {
 //   display: block;
 //   background-color: #EFEFEF;
 //   color: #283C73;
-//   padding: 40px 15px;
-//   margin-left: -15px;
-//   margin-right: -15px;
-//   margin-top: 15px;
+//   padding: 1em 1rem;
 //   font-size: 8vw;
-//   width: 100vw;
+//   width: 100%;
 // }
 
 
