@@ -32,7 +32,7 @@ document.getElementById("next-solstice").innerHTML = solstices[0];
 // ==== W3C example ====
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2019 15:37:25").getTime();
+var countDownDate = new Date("2018-09-29T19:55:00Z").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
