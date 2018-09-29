@@ -39,6 +39,12 @@ h1 {
   transform: translateY(-75%);
   left: 0;
   right: 0;
+
+  p:first-of-type {
+    font-size: 2em;
+    margin: 0;
+    padding: .5em;
+  }
 }
 
 #countdown-output {
