@@ -76,11 +76,11 @@ function showTimeLeft() {
     let now = new Date();
     let nextSolstice = findNextSolstice(now);
     if (nextSolstice == null) {
-        nextSolsticeOutput.innerHTML = "Slut på vintersolstånd! :-(";
+        nextSolsticeOutput.innerHTML = "Slut på vintersolstånd i vår lista! :-(";
     }
     else {
         let toNext = dateDifference(now, nextSolstice);
-        let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}
+        let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'}
         countdownOutput.innerHTML = count("dag", toNext.days) + ", " + count("timme", toNext.hours) + ", " + count("minut", toNext.minutes) + " och " + count("sekund", toNext.seconds);
         nextOutput.innerHTML = nextSolstice.toLocaleDateString("sv-SE", options);
     }

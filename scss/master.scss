@@ -9,7 +9,6 @@ body {
   font-family: $font-stack;
   background-color: $primary-color;
   color: $secondary-color;
-  text-align: center;
   background-size: cover;
   background-position-x: center;
   background-position-y: bottom;
@@ -41,6 +40,11 @@ a {
 
 .text-center {
   text-align: center;
+}
+
+#source {
+  float: right;
+  padding-right: 1em;
 }
 
 #countdown-output {
