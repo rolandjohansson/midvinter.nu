@@ -1,10 +1,6 @@
 @import "normalize";
 @import "vars";
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: $font-stack;
   background-color: $primary-color;
@@ -13,55 +9,56 @@ body {
   background-position-x: center;
   background-position-y: bottom;
   background-repeat: no-repeat;
-  height: 100%;
 }
 
-h1 {
-  font-family: "Futura", sans-serif;
-}
+footer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
+  a {
+    color: rgba(255,255,255,0.2);
+  } & :hover {
+    color: rgb(255, 255, 255);
+  }
 }
 
 h1 {
   position: absolute;
-  bottom: 1em;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  margin: 0;
 }
 
-a {
-  color: white;
-}
-
-.text-center {
+.main-container {
   text-align: center;
-}
-
-#source {
-  float: right;
-  padding-right: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-75%);
+  left: 0;
+  right: 0;
 }
 
 #countdown-output {
-  background-color: $secondary-color;
   color: $primary-color;
   display: block;
-  padding-top: 1em;
-  padding-bottom: 1em;
   font-size: 2em;
+  padding: 1em;
+  margin: 0;
+}
+
+.countdown-container {
+  background-color: $secondary-color; 
 }
 
 p {
-  display: block;
+  padding: 1em;
 }
 
-div {
-  width: 100%;
+#next-solstice {
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 900px) {
@@ -69,4 +66,8 @@ div {
     font-size: 3vw;
   }
 
+  footer {
+    top: unset;
+    bottom: 0;
+  }
 }

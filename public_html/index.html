@@ -33,19 +33,21 @@
 </head>
 
 <body>
-    <h1>midvinter.nu</h1>
+    <header>
+        <h1>midvinter.nu</h1>
+    </header>
     <main>
-        <div>
-            <p class="text-center">
-                Nästa astronomiska vintersolstånd inträffar i Sverige på
-                <b><span id="next-solstice"></span></b>. Det vill säga om <br><br>
-                <span id="countdown-output"></span>
-            </p>
-            <small>
-                <a id="source" href="https://sv.wikipedia.org/wiki/Vintersolst%C3%A5ndet" target="_blank" class="text-right">källa</a>
-            </small>
+        <div class="main-container">
+            <p>Nästa astronomiska vintersolstånd inträffar i Sverige på
+            <span id="next-solstice"></span>. Det vill säga om </p>
+            <div class="countdown-container">
+                <p id="countdown-output"></p>
+            </div>
         </div>
     </main>
+    <footer>
+        <a href="https://sv.wikipedia.org/wiki/Vintersolst%C3%A5ndet" target="_blank" class="text-right">Källa: Wikipedia</a>
+    </footer>
 </body>
 
 </html>
