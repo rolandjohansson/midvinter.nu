@@ -18,52 +18,7 @@ const solstices = [
 // Display the next solstice date
 let nextOutput = document.getElementById("next-solstice");
 
-// ===== Bday Calculator ===== //
-
 let countdownOutput = document.getElementById("countdown-output");
-
-function millisToYears(millis) {
-    return Math.floor(millis / 31556926000);
-}
-
-function millisToDays(millis) {
-    return Math.floor(millis / (1000 * 60 * 60 * 24));
-}
-
-function millisToHours(millis) {
-    return Math.floor((millis % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-}
-
-function millisToMinutes(millis) {
-    return Math.floor((millis % (1000 * 60 * 60)) / (1000 * 60));
-}
-
-function millisToSeconds(millis) {
-    return Math.floor((millis % (1000 * 60)) / 1000);
-}
-
-function TimeInterval() {
-    this.years = 0;
-    this.days = 0;
-    this.hours = 0;
-    this.minutes = 0;
-    this.seconds = 0;
-}
-
-// Returns a TimeInterval object with the time left from now to the future date some_date.
-// TODO: Throw exception if date2 < date1
-function dateDifference(date1, date2) {
-    var ti = new TimeInterval();
-
-    let millisDiff = date2 - date1;
-    ti.years = millisToYears(millisDiff);
-    ti.days = millisToDays(millisDiff);
-    ti.hours = millisToHours(millisDiff);
-    ti.minutes = millisToMinutes(millisDiff);
-    ti.seconds = millisToSeconds(millisDiff);
-
-    return ti;
-}
 
 function findNextSolstice(from) {
     for (i = 0; i < solstices.length; ++i) {
@@ -119,17 +74,15 @@ function plural(word, count) {
 function showTimeLeft() {
 
     let now = new Date();
-    // Fake date and time for testing purposes
-    //const now = new Date("2018-12-21T22:22:57Z")
-    //const now = new Date("2029-12-21T10:01:54");
     let nextSolstice = findNextSolstice(now);
     if (nextSolstice == null) {
         nextSolsticeOutput.innerHTML = "Slut på vintersolstånd! :-(";
     }
     else {
         let toNext = dateDifference(now, nextSolstice);
-        countdownOutput.innerHTML = "Nästa vintersolstånd inträffar om " + count("dag", toNext.days) + ", " + count("timme", toNext.hours) + ", " + count("minut", toNext.minutes) + " och " + count("sekund", toNext.seconds);
-        nextOutput.innerHTML = "Nästa vintersolstånd är " + nextSolstice.toLocaleDateString();
+        let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}
+        countdownOutput.innerHTML = count("dag", toNext.days) + ", " + count("timme", toNext.hours) + ", " + count("minut", toNext.minutes) + " och " + count("sekund", toNext.seconds);
+        nextOutput.innerHTML = nextSolstice.toLocaleDateString("sv-SE", options);
     }
 }
 

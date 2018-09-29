@@ -5,6 +5,23 @@ body {
   font-family: $font-stack;
   background-color: $primary-color;
   color: $secondary-color;
+  text-align: center;
+  /*background: url(../images/winter-02.jpeg);*/
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: "Futura", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
@@ -12,12 +29,6 @@ h1 {
   bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.wrapper {
-  max-width: 600px;
-  text-align: center;
-  margin: 0 auto;
 }
 
 a {
@@ -28,20 +39,35 @@ a {
   text-align: center;
 }
 
-// #countdown-output {
-//   display: block;
-//   background-color: #EFEFEF;
-//   color: #283C73;
-//   padding: 1em 1rem;
-//   font-size: 8vw;
-//   width: 100%;
-// }
+#countdown-output {
+  background-color: rgba(255,255,255,0.9);
+  color: $primary-color;
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2em;
+}
 
+#row1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  color: $tertiary-color;
+  font-size: 1.2em;
+}
 
-// @media screen and (min-width: 1000px) {
-//   #countdown-output {
-//       position: absolute;
-//       top: 40%;
-//       transform: translateY(-50%);
-//   }
-// }
+p {
+  display: block;
+}
+
+div {
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+  #countdown-output {
+    font-size: 3vw;
+  }
+
+}

@@ -302,9 +302,30 @@ template {
   display: none; }
 
 body {
-  font-family: "Futura", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background-color: #283c73;
-  color: #fff; }
+  color: #fff;
+  text-align: center;
+  /*background: url(../images/winter-02.jpeg);*/
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat; }
+
+h1 {
+  font-family: "Futura", sans-serif; }
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh; }
 
 h1 {
   position: absolute;
@@ -314,13 +335,34 @@ h1 {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-.wrapper {
-  max-width: 600px;
-  text-align: center;
-  margin: 0 auto; }
-
 a {
   color: white; }
 
 .text-center {
   text-align: center; }
+
+#countdown-output {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #283c73;
+  display: block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2em; }
+
+#row1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: block;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  color: #efefef;
+  font-size: 1.2em; }
+
+p {
+  display: block; }
+
+div {
+  width: 100%; }
+
+@media only screen and (min-width: 900px) {
+  #countdown-output {
+    font-size: 3vw; } }

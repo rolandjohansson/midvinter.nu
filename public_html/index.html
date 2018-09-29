@@ -2,10 +2,20 @@
 <html lang="sv">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64483226-8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-64483226-8');
+    </script>
+
     <meta charset="utf-8">
     <title>midvinter.nu | Tid kvar till vintersolståndet</title>
     <meta name="description" content="Hur långt är det kvar till midvinter? Svaret finner du här!">
-    <meta name="keywords" content="mitt i vintern,vintersolstånd,solstånd,miðjum vetri,julblot,midvinterblot,astronomiska vintersolståndet, årets mörkaste dag">
+    <meta name="keywords" content="midvinter,mitt i vintern,vintersolstånd,solstånd,miðjum vetri,julblot,midvinterblot,astronomiska vintersolståndet,årets mörkaste dag,årets kortaste dag">
     <meta name="author" content="Roland Johansson">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -17,17 +27,25 @@
     <meta name="msapplication-TileColor" content="#283c73">
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <!-- <link rel="stylesheet" href="css/master.css"> -->
+    <link rel="stylesheet" href="css/master.css">
+    <script src="js/date-diff.js" defer></script>
     <script src="js/solstices.js" defer></script>
+    <script src="js/random-bg.js" defer></script>
 </head>
 
 <body>
     <h1>midvinter.nu</h1>
-    <div class="wrapper">
-        <p id="countdown-output"></p>
-        <p id="next-solstice"></p>
-        <a id="source" href="https://sv.wikipedia.org/wiki/Vintersolst%C3%A5ndet" target="_blank">Källa</a>
-    </div>
+    <main>
+        <div>
+            <p>
+                <span id='row1'>Nästa astronomsika vintersolstånd inträffar i Sverige 
+                <span id="next-solstice"></span>, det vill säga om</span>
+                <span id="countdown-output"></span>
+            </p>
+            
+            <a id="source" href="https://sv.wikipedia.org/wiki/Vintersolst%C3%A5ndet" target="_blank">Källa</a>
+        </div>
+    </main>
 </body>
 
 </html>
