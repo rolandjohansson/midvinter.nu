@@ -2,60 +2,62 @@
 <html lang="sv">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64483226-8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64483226-8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-        gtag('config', 'UA-64483226-8');
-    </script>
-    <meta charset="utf-8">
-    <title>midvinter.nu | Tid kvar till vintersolståndet</title>
-    <meta name="description" content="Hur långt är det kvar till midvinter? Svaret finner du här!">
-    <meta name="keywords" content="midvinter,mitt i vintern,vintersolstånd,solstånd,miðjum vetri,julblot,midvinterblot,astronomiska vintersolståndet,årets mörkaste dag,årets kortaste dag">
-    <meta name="author" content="Roland Johansson">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image:height" content="1005">
-    <meta property="og:image:width" content="1920">
-    <meta property="og:description" content="Kolla hur l&aring;ngt det &auml;r kvar p&aring; nedr&auml;kningen till n&auml;sta midvinter!">
-    <meta property="og:image" content="http://midvinter.nu/images/og-image.jpg">
-    <meta property="og:title" content="midvinter.nu">
-    <meta property="og:url" content="midvinter.nu">
-    <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#283c73">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#283c73">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/master.css">
-    <script src="js/date-diff.js" defer></script>
-    <script src="js/solstices.js" defer></script>
-    <!-- <script src="js/random-bg.js" defer></script> -->
+    gtag('js', new Date());
+
+    gtag('config', 'UA-64483226-8');
+  </script>
+  <meta charset="utf-8">
+  <title>midvinter.nu | Tid kvar till vintersolståndet</title>
+  <meta name="description" content="Hur långt är det kvar till midvinter? Svaret finner du här!">
+  <meta name="keywords" content="midvinter,mitt i vintern,vintersolstånd,solstånd,miðjum vetri,julblot,midvinterblot,astronomiska vintersolståndet,årets mörkaste dag,årets kortaste dag">
+  <meta name="author" content="Roland Johansson">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image:height" content="1005">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:description" content="Kolla hur l&aring;ngt det &auml;r kvar p&aring; nedr&auml;kningen till n&auml;sta midvinter!">
+  <meta property="og:image" content="http://midvinter.nu/images/og-image.jpg">
+  <meta property="og:title" content="midvinter.nu">
+  <meta property="og:url" content="midvinter.nu">
+  <meta property="og:type" content="website">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#283c73">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#283c73">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/master.css">
+  <script src="js/date-diff.js" defer></script>
+  <script src="js/solstices.js" defer></script>
+  <!-- <script src="js/random-bg.js" defer></script> -->
 </head>
 
 <body>
-    <header>
-        <h1>midvinter.nu</h1>
-    </header>
-    <main>
-        <div class="main-container">
-            <p>Midvinter inträffar om</p>
-            <div class="countdown-container">
-                <p id="countdown-output"></p>
-            </div>
-            <p>Nästa astronomiska vintersolstånd inträffar i Sverige på
-                <span id="next-solstice"></span>.</p>
-        </div>
-    </main>
-    <footer>
-        <a href="https://sv.wikipedia.org/wiki/Vintersolst%C3%A5ndet" target="_blank" class="text-right">Källa: Wikipedia</a>
-    </footer>
+  <header>
+    <h1>midvinter.nu</h1>
+    <small>vintern kommer</small>
+  </header>
+  <main>
+    <div class="main-container">
+      <p>Midvinter inträffar om</p>
+      <div class="countdown-container">
+        <p id="countdown-output"></p>
+      </div>
+      <p>Nästa astronomiska vintersolstånd inträffar i Sverige på
+        <span id="next-solstice"></span>.</p>
+    </div>
+  </main>
+  <footer>
+    <a href="https://sv.wikipedia.org/wiki/Vintersolst%C3%A5ndet" target="_blank" class="text-right">Källa: Wikipedia</a>
+  </footer>
 </body>
 
 </html>
