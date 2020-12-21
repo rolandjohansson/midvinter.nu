@@ -301,13 +301,17 @@ template {
 [hidden] {
   display: none; }
 
+html {
+  height: -webkit-fill-available; }
+
 body {
   color: #fff;
   background: -webkit-gradient(linear, left bottom, left top, from(#ff5e00), color-stop(7%, #e0c354), color-stop(18%, #c4879f), color-stop(39%, #426794), to(#11283d));
   background: -webkit-linear-gradient(bottom, #ff5e00 0%, #e0c354 7%, #c4879f 18%, #426794 39%, #11283d 100%);
   background: -o-linear-gradient(bottom, #ff5e00 0%, #e0c354 7%, #c4879f 18%, #426794 39%, #11283d 100%);
   background: linear-gradient(0deg, #ff5e00 0%, #e0c354 7%, #c4879f 18%, #426794 39%, #11283d 100%);
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: Georgia, "Futura", Helvetica, Arial, sans-serif; }
 
 footer {
