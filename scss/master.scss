@@ -3,16 +3,18 @@
 
 body {
   color: $secondary-color;
-  background-color: $primary-color;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom;
-  background-size: cover;
-
+  //background-color: $primary-color;
+  background: $sky-gradient-color;
+  //background-repeat: no-repeat;
+  //background-position-x: center;
+  //background-position-y: bottom;
+  //background-size: cover;
+  height: 100vh;
   font-family: $font-stack;
 }
 
 footer {
+  
   position: absolute;
   top: 0;
   right: 0;
@@ -53,7 +55,7 @@ header {
     margin: 0;
     padding: .5em;
 
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
@@ -63,13 +65,13 @@ header {
   margin: 0;
   padding: 1em;
 
-  color: $primary-color;
+  //color: $primary-color;
 
   font-size: 2em;
 }
 
 .countdown-container {
-  background-color: $secondary-color;
+  //background-color: $secondary-color;
 }
 
 p {
@@ -82,7 +84,7 @@ p {
 
 @media only screen and (min-width: 900px) {
   #countdown-output {
-    font-size: 3vw;
+    font-size:3.5vw;
   }
 
   footer {
