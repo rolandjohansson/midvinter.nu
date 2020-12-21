@@ -334,7 +334,8 @@ header {
   transform: translateX(-50%);
   text-align: center; }
   header h1 {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-family: "Futura"; }
 
 .main-container {
   position: absolute;
